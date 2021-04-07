@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio</title>
+	<script type="text/javascript">
+		function mudarFundo(a){
+			document.getElementById('impute').style.background = a
+		}
+		function qunatidadeCarater(){
+					var quantidade = document.getElementById('impute').value
+					document.getElementById('impute').value = ''
+					
+					if(quantidade.length > 3){
+						mudarFundo('green')
+					}else{
+						mudarFundo('red')
+					}
+				}
+		
+	</script>
+</head>
+<body>
+	<form>
+		<input onblur="qunatidadeCarater()" onclick="mudarFundo('yellow')" id="impute" type="text">
+	</form>
+</body>
+</html>

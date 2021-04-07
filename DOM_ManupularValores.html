@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScripts</title>
+	<script type="text/javascript">
+		function distribiuCarater(){
+			var carater = document.getElementById('entrada').value
+
+			document.getElementById('entrada').value = ''
+
+			carater.trim()
+
+			switch(carater){
+				case '0':
+				case '1':
+				case '2':
+				case '3':
+				case '4':
+				case '5':
+				case '6':
+				case '7':
+				case '8':
+				case '9': document.getElementById('numeros').value =carater;break;
+				default: document.getElementById('letras').value = carater
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="entrada" placeholder="digite um carater aqui" onkeyup="distribiuCarater()">
+		<hr/>
+		<span>Letras:</span>
+		<input type="text" id="letras" disabled="disabled">
+		<br><br>
+		<span>Numero:</span>
+		<input type="text" id="numeros" disabled="disabled">
+	</form>
+
+</body>
+</html>

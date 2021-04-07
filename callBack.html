@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScripts</title>
+	<script type="text/javascript">
+		function exibirArquivo(id, callbackSucesso, callbackErro){
+
+			if (true){
+				callbackSucesso("Funcao de callback em JS", "Funcao de callback sao muito utilizada")
+			}else{
+				callbackErro("Erro ao recuperar as dados")
+			}
+		}
+
+		var callbackSucesso = function(titulo, descricao){
+			document.write('<h1>'+ titulo+'</h1>')
+			document.write('<hr/>')
+			document.write('<p>'+ descricao+'</p>')
+		}
+
+		var callbackErro = function(erro){
+			document.write('<p><b>Erro:</b>'+erro+'</p>')
+
+		}
+
+		exibirArquivo(1, callbackSucesso, callbackErro)
+	</script>
+</head>
+<body>
+
+</body>
+</html>
